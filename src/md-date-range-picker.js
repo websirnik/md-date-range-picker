@@ -802,7 +802,8 @@
                     '</md-dialog-content>',
                     '<md-dialog-actions layout="row" layout-align="end center">',
                     '<md-button ng-click="cancel()">{{getLocalizationVal("Cancel")}}</md-button>',
-                    '<md-button ng-if="!config.autoConfirm" class="md-raised" ng-click="clear()">{{getLocalizationVal("Clear")}}</md-button>',
+                    // removed clear button
+                    // '<md-button ng-if="!config.autoConfirm" class="md-raised" ng-click="clear()">{{getLocalizationVal("Clear")}}</md-button>',
                     '<md-button ng-if="!config.autoConfirm" class="md-raised md-primary" ng-click="ok()">{{getLocalizationVal("Ok")}}</md-button>',
                     '</md-dialog-actions>',
                     '</md-dialog>'].join(''),
