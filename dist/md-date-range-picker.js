@@ -1,13 +1,13 @@
 /*
 * Name: md-date-range-picker
 * Version: 0.8.1
-* Build Date: 2018-1-5
+* Build Date: 2018-1-10
 * Author: roel barreto <greatcodeideas@gmail.com>
 */
 (function (window, angular) {
 
     angular
-        .module('ngMaterialDateRangePicker', ['ngMaterial'])
+        .module('ngMaterialDateRangePicker', [])
         .directive('mdDateRangePicker', mdDateRangePickerDirective)
         .directive('mdDateRange', mdDateRangeDirective)
         .controller('mdDateRangePickerCtrl', mdDateRangePickerCtrl)

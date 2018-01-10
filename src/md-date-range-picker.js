@@ -7,7 +7,7 @@
 (function (window, angular) {
 
     angular
-        .module('ngMaterialDateRangePicker', ['ngMaterial'])
+        .module('ngMaterialDateRangePicker', [])
         .directive('mdDateRangePicker', mdDateRangePickerDirective)
         .directive('mdDateRange', mdDateRangeDirective)
         .controller('mdDateRangePickerCtrl', mdDateRangePickerCtrl)
