@@ -35,7 +35,7 @@
             <td>1 Default</td>
           </tr>
         </table>
-      </code> 
+      </code>
     </div>
     <div layout="column" flex>
     <h2>Html</h2>
@@ -47,6 +47,7 @@ $scope.selectDateRange = function ($event, autoConfirm) {
     model: $scope.serviceModel,
     autoConfirm: autoConfirm,
     targetEvent: $event,
+    showTemplate: true,
   }).then(function (result) {
     $scope.serviceModel = result;
   }).catch(function () {

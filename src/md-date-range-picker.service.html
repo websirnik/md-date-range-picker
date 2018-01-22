@@ -1,0 +1,34 @@
+<md-dialog aria-label="Date Range Picker">
+    <md-toolbar class="md-primary" layout="row" layout-align="start center">
+        <md-button aria-label="Date Range Picker" class="md-icon-button" aria-hidden="true" ng-disabled="true">
+            <md-icon md-svg-icon="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05IDExSDd2Mmgydi0yem00IDBoLTJ2Mmgydi0yem00IDBoLTJ2Mmgydi0yem0yLTdoLTFWMmgtMnYySDhWMkg2djJINWMtMS4xMSAwLTEuOTkuOS0xLjk5IDJMMyAyMGMwIDEuMS44OSAyIDIgMmgxNGMxLjEgMCAyLS45IDItMlY2YzAtMS4xLS45LTItMi0yem0wIDE2SDVWOWgxNHYxMXoiLz4KICAgIDxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz4KPC9zdmc+"></md-icon>
+        </md-button>
+        <span md-truncate class="md-toolbar-tools">{{model.selectedTemplateName}}</span>
+    </md-toolbar>
+    <md-dialog-content>
+        <div layout="row">
+            <md-date-range-picker date-start="model.dateStart" date-end="model.dateEnd" show-template="config.showTemplate || model.showTemplate" selected-template="model.selectedTemplate" selected-template-name="model.selectedTemplateName" first-day-of-week="config.firstDayOfWeek || model.firstDayOfWeek" localization-map="config.localizationMap || model.localizationMap" custom-templates="config.customTemplates || model.customTemplates" format="config.format" disable-templates="{{model.disableTemplates}}" md-on-select="handleOnSelect($dates)" is-disabled-date="config.isDisabledDate ? config.isDisabledDate($date) : model.isDisabledDate({ $date: $date })" max-range="config.maxRange || model.maxRange" one-panel="config.onePanel || model.onePanel"></md-date-range-picker>
+            <div class="row">
+<!--                 <md-input-container class="md-block" flex-gt-sm>
+                    <label>Date Range</label>
+                    <md-select ng-model="model.selectedTemplate">
+                        <md-option value="custom">Custom</md-option>
+                        <md-option value="TD">Today</md-option>
+                    </md-select>
+                </md-input-container> -->
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Start date</label>
+                    <md-datepicker ng-model="model.dateStart"  md-placeholder="Start date" ></md-datepicker>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>End date</label>
+                    <md-datepicker type="date" ng-model="model.dateEnd" md-placeholder="End date"></md-datepicker>
+                </md-input-container>
+            </div>
+        </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row" layout-align="end center">
+        <md-button ng-click="cancel()">{{getLocalizationVal("Cancel")}}</md-button>
+        <md-button ng-if="!config.autoConfirm" class="md-raised md-primary" ng-click="ok()">{{getLocalizationVal("Ok")}}</md-button>
+    </md-dialog-actions>
+</md-dialog>

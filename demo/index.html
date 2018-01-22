@@ -58,10 +58,10 @@
   <!-- Your application bootstrap  -->
   <script type="text/javascript">
     /**
-     * You must include the dependency on 'ngMaterial' 
+     * You must include the dependency on 'ngMaterial'
      */
     angular.module('demo.app', ['ngMaterial', 'ngMaterialDateRangePicker']).controller('ctrl', function ($scope, $mdDateRangePicker) {
-      $scope.page = 'calendar';
+      $scope.page = 'service';
 
       var lessThan3Day = new Date();
       lessThan3Day.setDate(lessThan3Day.getDate() - 2);

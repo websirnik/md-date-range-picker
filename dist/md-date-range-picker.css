@@ -1,23 +1,33 @@
+.unstyled::-webkit-inner-spin-button,
+.unstyled::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
 /*
 * Name: md-date-range-picker
 * Version: 0.8.1
-* Build Date: 2018-1-10
+* Build Date: 2018-1-22
 * Author: roel barreto <greatcodeideas@gmail.com>
 */
+
 md-date-range {
     cursor: pointer;
 }
+
 md-date-range-picker {
     display: block;
     max-width: 664px;
 }
+
 md-date-range-picker .md-date-range-picker__one-panel {
     display: block;
     max-width: 340px;
 }
-.md-date-range-picker [event-key] *{
+
+.md-date-range-picker [event-key] * {
     pointer-events: none;
 }
+
 .md-date-range-picker {
     position: relative;
     background: #FFF;
@@ -88,11 +98,10 @@ md-date-range-picker .md-date-range-picker__one-panel {
 }
 
 .md-date-range-picker__calendar__not-in-active-month {
-    color: rgba(0,0,0,0.5);
+    color: rgba(0, 0, 0, 0.5);
 }
 
-.md-date-range-picker__calendar 
-.md-date-range-picker__calendar__grid:hover:not(.md-date-range-picker__calendar__selected):not(.md-date-range-picker__calendar__disabled) {
+.md-date-range-picker__calendar .md-date-range-picker__calendar__grid:hover:not(.md-date-range-picker__calendar__selected):not(.md-date-range-picker__calendar__disabled) {
     transition: background 300ms ease-out;
     background: rgba(0, 0, 0, 0.1);
 }
@@ -102,19 +111,20 @@ md-date-range-picker .md-date-range-picker__one-panel {
     color: #FFF;
     border-radius: 0;
 }
+
 .md-date-range-picker__calendar__selected.md-date-range-picker__calendar__disabled {
     background: rgba(0, 0, 0, 0.2);
 }
+
 .md-date-range-picker__calendar__not-in-active-month.md-date-range-picker__calendar__selected {
-    color: rgba(255,255,255,0.2);
+    color: rgba(255, 255, 255, 0.2);
 }
 
 .md-date-range-picker__calendar__today {
     font-weight: bold;
 }
 
-.md-date-range-picker__calendar 
-.md-date-range-picker__calendar__grid.md-date-range-picker__calendar__disabled {
+.md-date-range-picker__calendar .md-date-range-picker__calendar__grid.md-date-range-picker__calendar__disabled {
     opacity: 0.3;
     cursor: not-allowed;
 }
